@@ -59,6 +59,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .readonly-switch{
 	margin: 0 0 4px 10px;
 }
+.readonly-switch:checked{
+	color: #278C86;
+}
 .readonly-text{
 	font-size: 16px;
 	line-height: 24px;
@@ -67,7 +70,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .app{
 	height: 600px;
 	width: 100%;
-	background-color: brown;
+	background: #f7f7f7;
 	padding: 50px;
 	display: flex;
 	flex-direction: column;
@@ -88,13 +91,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	margin-right: 10px;
 	border-radius: 10px;
 	background-color: white;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
 	padding: 20px;
 	font-size: 24px;
 	color: black;
 	width: 100%;
 }
 .add-tag_input:disabled{
-	background-color: grey;
+	box-shadow: none;
 }
 .add-tag_button{
 	flex: 1 1 40%;
@@ -102,11 +106,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	margin-left: 10px;
 	border-radius: 10px;
 	background-color: white;
-	color: black;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
+	color: #818181;
 	font-size: 24px;
 }
 .add-tag_button:disabled{
-	background-color: grey;
+	box-shadow: none;
+}
+.add-tag_button:hover{
+	color: white;
+	background-color:#278C86;
+	opacity: 20%;
 }
 .tags-area{
 	flex: 1 1 auto;
@@ -114,9 +124,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	padding: 20px;
 	border-radius: 10px;
 	overflow: auto;
+	box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.05);
 }
 .tag{
-	background-color: rebeccapurple;
+	background: #278C86;
 	display: flex;
 	height: 70px;
 	border-radius: 10px;
@@ -134,10 +145,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	flex: 0 0 20px;
 	height: 20px;
 	border-radius: 50%;
-	background-color:brown;
+	background: none;
 	text-align: center;
 	color: white;
 	rotate: 45deg;
+	font-size: 20px;
 }
 .tag-button:disabled{
 	display: none;
