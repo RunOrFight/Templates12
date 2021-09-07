@@ -14,7 +14,7 @@
             <div class="header-content">
                 <form action="" class="readonly">
                     <p class="readonly-text">ReadOnly</p>
-                    <input type="checkbox" class="readonly-switch">
+                    <input type="checkbox" class="readonly-switch" checked>
                 </form>
             </div>
         </div>
@@ -24,16 +24,13 @@
         <div class="wrapper">
             <div class="app">
                 <div class="controll-panel">
-                    <form action="" class="add-tag">
+                    <form action="#" class="add-tag" method="GET">
                         <input type="text" class="add-tag_input">
-                        <button class="add-tag_button">Add</button>
+                        <button class="add-tag_button" onclick="addTag()">Add</button>
                     </form>
                 </div>
                 <div class="tags-area">
-                    <div class="tag">
-                        <p class="tag-text">Tagname</p>
-                        <button class="tag-button">x</button>
-                    </div>
+
                 </div>
             </div>
         </div>

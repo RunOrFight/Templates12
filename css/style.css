@@ -74,7 +74,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	border-radius: 10px;
 }
 .controll-panel{
-	flex: 0 1 90px;
+	flex: 0 0 90px;
 	display: flex;
 }
 .add-tag{
@@ -93,6 +93,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	color: black;
 	width: 100%;
 }
+.add-tag_input:disabled{
+	background-color: grey;
+}
 .add-tag_button{
 	flex: 1 1 40%;
 	max-height: 70px;
@@ -102,11 +105,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	color: black;
 	font-size: 24px;
 }
+.add-tag_button:disabled{
+	background-color: grey;
+}
 .tags-area{
 	flex: 1 1 auto;
 	background-color: white;
 	padding: 20px;
 	border-radius: 10px;
+	overflow: auto;
 }
 .tag{
 	background-color: rebeccapurple;
@@ -130,7 +137,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	background-color:brown;
 	text-align: center;
 	color: white;
-	padding-bottom: 3px;
+	rotate: 45deg;
+}
+.tag-button:disabled{
+	display: none;
 }
 @media (max-width: 600px) {
 
@@ -139,15 +149,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	}
 	.add-tag_input{
 		max-height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+		font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (800 - 320)));
 	}
 	.add-tag_button{
 		max-height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+		font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (800 - 320)));
 	}
 	.controll-panel{
 		flex-basis: calc(60px + (90 - 60) * ((100vw - 320px) / (800 - 320)));
 	}
 	.tag{
 		height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+		font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (800 - 320)));
 	}
 	.tags-area{
 		padding: calc(10px + (20 - 10) * ((100vw - 320px) / (800 - 320)));
