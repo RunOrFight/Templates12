@@ -25,6 +25,7 @@ html,body{
 	-ms-text-size-adjust: 100%;
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
+	color: black;
 }
 input,button,textarea{font-family:inherit;}
 
@@ -39,20 +40,20 @@ img{vertical-align: top;}
 h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 /*--------------------*/
 
-.head{
-	width: 100%;
-}
-.header-wrapper{
-	max-width: 1000px;
-	height: 70px;
+.wrapper{
+	max-width: 600px;
 	margin: 0 auto;
+	padding: 0 20px;
+	box-sizing: content-box;
+}
+.header-content{
+	height: 40px;
 	display: flex;
 	align-items: center;
 	justify-content: end;
 }
 .readonly{
 	display: flex;
-	padding-right: 20px;
 	align-items: flex-end;
 }
 .readonly-switch{
@@ -62,3 +63,95 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 	font-size: 16px;
 	line-height: 24px;
 }
+/****************************************/
+.app{
+	height: 600px;
+	width: 100%;
+	background-color: brown;
+	padding: 50px;
+	display: flex;
+	flex-direction: column;
+	border-radius: 10px;
+}
+.controll-panel{
+	flex: 0 1 90px;
+	display: flex;
+}
+.add-tag{
+	flex: 1 1 100%;
+	display: flex;
+	justify-content: start;
+}
+.add-tag_input{
+	flex: 1 1 60%;
+	max-height: 70px;
+	margin-right: 10px;
+	border-radius: 10px;
+	background-color: white;
+	padding: 20px;
+	font-size: 24px;
+	color: black;
+	width: 100%;
+}
+.add-tag_button{
+	flex: 1 1 40%;
+	max-height: 70px;
+	margin-left: 10px;
+	border-radius: 10px;
+	background-color: white;
+	color: black;
+	font-size: 24px;
+}
+.tags-area{
+	flex: 1 1 auto;
+	background-color: white;
+	padding: 20px;
+	border-radius: 10px;
+}
+.tag{
+	background-color: rebeccapurple;
+	display: flex;
+	height: 70px;
+	border-radius: 10px;
+	align-items: center;
+	padding: 10px;
+	margin-bottom: 5px;
+}
+.tag-text{
+	flex: 1 1 auto;
+	text-align: center;
+	font-size: 20px;
+	color: white;
+}
+.tag-button{
+	flex: 0 0 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color:brown;
+	text-align: center;
+	color: white;
+	padding-bottom: 3px;
+}
+@media (max-width: 600px) {
+
+	.app{
+		padding: calc(20px + (50 - 20) * ((100vw - 320px) / (800 - 320)));
+	}
+	.add-tag_input{
+		max-height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+	}
+	.add-tag_button{
+		max-height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+	}
+	.controll-panel{
+		flex-basis: calc(60px + (90 - 60) * ((100vw - 320px) / (800 - 320)));
+	}
+	.tag{
+		height: calc(40px + (70 - 40) * ((100vw - 320px) / (800 - 320)));
+	}
+	.tags-area{
+		padding: calc(10px + (20 - 10) * ((100vw - 320px) / (800 - 320)));
+	}
+	
+}
+
