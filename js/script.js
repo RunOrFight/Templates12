@@ -71,7 +71,7 @@ if(newStorage.getItem('tagList')){
 }
 
 if(newStorage.getItem('readonlyMode')){
-    tagList.setReadonly(newStorage.getItem('readonlyMode'))
+    tagList.setReadonly(JSON.parse(newStorage.getItem('readonlyMode')))
 }
 else{
     newStorage.setItem('readonlyMode', tagList.checkbox.checked)
