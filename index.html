@@ -14,7 +14,7 @@
             <div class="header-content">
                 <div class="readonly">
                     <p class="readonly-text">ReadOnly</p>
-                    <input type="checkbox" class="readonly-switch" >
+                    <input type="checkbox" class="readonly-switch" onchange="tagList.setReadonly(tagList.checkbox.checked)" >
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
                 <div class="controll-panel">
                     <div class="add-tag">
                         <input type="text" class="add-tag_input">
-                        <button class="add-tag_button" onclick="addTag()">Add</button>
+                        <button class="add-tag_button" onclick="tagList.addTag(tagList.inputTagName.value)">Add</button>
                     </div>
                 </div>
                 <div class="tags-area">
